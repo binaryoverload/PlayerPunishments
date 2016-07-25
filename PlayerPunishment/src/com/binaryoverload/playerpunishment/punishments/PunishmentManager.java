@@ -60,5 +60,13 @@ public class PunishmentManager {
 			}
 		}
 	}
+	
+	public List<PunishmentBase> getPunishments(Player p){
+		if(isPunished(p)){
+			return punishedPlayers.get(p);
+		} else {
+			return null;
+		}
+	}
 
 }
