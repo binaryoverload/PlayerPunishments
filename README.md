@@ -1,2 +1,2 @@
 # PlayerPunishments
-Punishes Players in New an Interesting Ways
+Punishes Players in new and interesting ways
