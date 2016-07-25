@@ -1,5 +1,6 @@
 package com.binaryoverload.playerpunishment.punishments;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -25,6 +26,38 @@ public class PunishmentManager {
 			return false;
 		} else {
 			return false;
+		}
+	}
+	
+	public void addPunishment(Player p, PunishmentBase punishment){
+		if(isPunished(p)){
+			List<PunishmentBase> punishments = punishedPlayers.get(p);
+			
+			punishments.add(punishment);
+			
+			punishedPlayers.put(p, punishments);
+		} else {
+			List<PunishmentBase> punishments = new ArrayList<PunishmentBase>();
+			
+			punishments.add(punishment);
+			
+			punishedPlayers.put(p, punishments);
+		}
+	}
+	
+	public void removePunishment(Player p, PunishmentBase punishment){
+		if(isPunished(p)){
+			if(punishedPlayers.get(p).contains(punishment)){
+				List<PunishmentBase> punishments = punishedPlayers.get(p);
+			
+				punishments.remove(punishment);
+				
+				if(punishments.size() == 0){
+					punishedPlayers.remove(p);
+				} else {
+					punishedPlayers.put(p, punishments);
+				}
+			}
 		}
 	}
 
