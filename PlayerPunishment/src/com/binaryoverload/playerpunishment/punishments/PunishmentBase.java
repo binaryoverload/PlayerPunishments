@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.bukkit.entity.Player;
 
-import com.binaryoverload.playerpunishment.Events;
+import com.binaryoverload.playerpunishment.events.Events;
 
 /**
  * The base class for all punishments to extend

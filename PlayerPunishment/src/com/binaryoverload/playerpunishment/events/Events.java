@@ -1,4 +1,4 @@
-package com.binaryoverload.playerpunishment;
+package com.binaryoverload.playerpunishment.events;
 
 public enum Events {
 
